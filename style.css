@@ -1,0 +1,104 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Container for the content */
+.coming-soon {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Title */
+.coming-soon h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffcc00; /* Bright color to catch attention */
+}
+
+/* Description Text */
+.coming-soon p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+/* Countdown Timer */
+.countdown {
+    margin-bottom: 30px;
+}
+
+#timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcc00;
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    display: inline-block;
+}
+
+/* Social Media Links */
+.social-media a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
+}
+
+/* Social Media Icons */
+.social-media img {
+    width: 60px;
+    height: 60px;
+    transition: opacity 0.3s ease;
+}
+
+.social-media img:hover {
+    opacity: 0.7;
+}
+
+/* Credits Section */
+.team-credits {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.team-credits p {
+    font-weight: bold;
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 600px) {
+    .coming-soon h1 {
+        font-size: 2.5rem;
+    }
+
+    .coming-soon p {
+        font-size: 1rem;
+    }
+
+    #timer {
+        font-size: 1.5rem;
+    }
+}

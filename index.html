@@ -3,92 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coming Soon | Sahas Khadka & Team</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-   <h1>My Portfolio </h1>
-    </header>
-    <main>
-        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEk7NHSLtb_7Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723814183830?e=2147483647&v=beta&t=LDmBV3Id_IU20-chfB-VV0SnWTa6agOVanWjuGOjTBA">
-        <hr>
-<div><h2>Contact me at:</h2>
-<br>
-<section>
-    <ul>
-        <li> <a href="https://facebook.com/prince.xettri.9638/" target="_main"> <img src="https://img.freepik.com/free-psd/3d-icon-social-media-app_23-2150049579.jpg?semt=ais_hybrid" height="120"> </a> </li>
 
-   <li> <a href="https://np.linkedin.com/in/sahas-khadka-6685892a5?trk=people-guest_people_search-card" target="_main"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" height="120"> </a> </li>
-    <li>Email:khadkasahas6@gmail.com </li>
-</ul>
-<hr>
-<table>
-    <caption>About me </caption>
-    <thead>
-    <tr>
-        <th>
-            Name
-        </th>
-        <th>
-            Age
-        </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>
-            Sahas
-        </td>
-        <td>
-            19
-        </td>
-    </tr>
-    </tbody>
-</table>
-<hr>
-<h3>Registration form> </h3>
-<form action="/action.php">
-    <input type="text" placeholder="username">
-    <br>
-    <input type="password" placeholder="password">
-    <br>
-    <h4>Select your class</h4>
-    <label for="101">
-    <input type="radio" value="+2" name="class" id="101"> +2
-    </label>
-    <br>
-    <label for="102">
-    <input type="radio" value="Bachelors" name="class" id="102"> Bachelors
-    </label>
-    <br>
-    <h4> Select your subjects:</h4>
-    <label for="Math">
-    <input type="checkbox" value="Math" name="sub" id="103"> Math
-</label>
-<br>
-<label for="Physics">
-    <input type="checkbox" value="Physics" name="sub" id="104"> Physics
-</label>
-    <br>
-    <label for="English">
-    <input type="checkbox" value="English" name="sub" id="105"> English
-</label>
-    <br>
-    <label for="Computer>">
-    <input type="checkbox" value="Computer" name="sub" id="106"> Computer
-</label>
-    <br> <br>
-   <caption>Choose your city:</caption>
-   <br>
-    <select name="city">
-        <option value="Dang">Dang</option>
-        <option value="Kathmandu">Kathmandu</option>
-        <option value="Pokhara">Pokhara</option>
-        <option value="Patan">Patan</option>
-    </select>
-    <br>
-    <br>
-    <textarea name="feedback" id="101" placeholder="Feedback Please"> </textarea>
-    <input type="submit" value="Submit">
-</form>
+    <section class="coming-soon">
+        <div class="content">
+            <h1>Our New Website is Coming Soon!</h1>
+            <p>We're working hard to bring you something amazing. Stay tuned for an exciting launch!</p>
+
+            <div class="countdown">
+                <h2>Launch Time:</h2>
+                <div id="timer"></div>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us:</h3>
+                <a href="https://facebook.com/prince.xettri.9638/" target="_blank">
+                    <img src="https://img.freepik.com/free-psd/3d-icon-social-media-app_23-2150049579.jpg?semt=ais_hybrid" alt="Facebook" width="60">
+                </a>
+                <a href="https://np.linkedin.com/in/sahas-khadka-6685892a5?trk=people-guest_people_search-card" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" alt="LinkedIn" width="60">
+                </a>
+            </div>
+
+            <div class="team-credits">
+                <p>Powered by <strong>Sahas</strong> & The Team</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Countdown Timer Logic
+        const launchDate = new Date("December 31, 2024 00:00:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML = 
+                days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ";
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("timer").innerHTML = "Site Launched!";
+            }
+        }, 1000);
+    </script>
+
+</body>
 </html>
