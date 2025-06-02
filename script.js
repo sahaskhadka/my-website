@@ -1,6 +1,6 @@
 // Typing Effect
 const title = document.querySelector(".typing");
-const words = ["Web Developer", "ML Enthusiast", "Problem Solver"];
+const words = ["Web Developer", "M L Enthusiast", "Problem Solver"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
